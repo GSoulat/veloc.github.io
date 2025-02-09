@@ -14,28 +14,28 @@
 
     <main id="main">
         
-      <div id="ciel"></div>
-      <div id="herbe"></div>
-      <div id="soleil"></div>
+      <div id="ciel" style="background-color: #87CEEB;"></div> <!-- Nouvelle couleur de ciel -->
+      <div id="herbe" style="background-color: #32CD32;"></div> <!-- Nouvelle couleur d'herbe -->
+      <div id="soleil" style="background-color: #FFD700;"></div> <!-- Nouvelle couleur de soleil -->
       <div id="nuages"></div>
-      <h1 class="text-white">Prévision du nombre de vélo</h1>
+      <h1 class="text-white">Bienvenue sur la Prévision du nombre de vélos</h1> <!-- Nouveau texte -->
       <nav id="cercle">
         <div id="main-cercle">
             <div id="center-circle">
                 <ul>
                     <li class="ch-img-1 ch-item">
                       <div class="ch-info">
-                        <a href="{{ url_for('home.semaine_page') }}"><h3>Prévision vélo sur 5 jours</h3></a>
+                        <a href="{{ url_for('home.semaine_page') }}"><h3>Prévision vélo sur 5 jours</h3><i class="fas fa-bicycle"></i></a> <!-- Ajout d'une icône -->
                       </div>
                     </li>
                     <li class="ch-img-2  ch-item">
                       <div class="ch-info">
-                        <a href="{{ url_for('home.journalier_page') }}"><h3>Prévision vélo sur la journée</h3></a>
+                        <a href="{{ url_for('home.journalier_page') }}"><h3>Prévision vélo sur la journée</h3><i class="fas fa-clock"></i></a> <!-- Ajout d'une icône -->
                       </div>
                     </li>
                     <li class="ch-img-3  ch-item">
                       <div class="ch-info">
-                        <a href="{{ url_for('info.infos') }}"><h3>Prévision vélo selon la date et l'heure</h3></a>
+                        <a href="{{ url_for('info.infos') }}"><h3>Prévision vélo selon la date et l'heure</h3><i class="fas fa-calendar-alt"></i></a> <!-- Ajout d'une icône -->
                       </div>
                     </li>
                 </ul>                
@@ -45,5 +45,20 @@
     </main>
 
 </div>
+
+<!-- Ajout de FontAwesome pour les icônes -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<!-- Ajout d'une animation CSS -->
+<style>
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+    #soleil {
+        animation: float 3s infinite;
+    }
+</style>
 
 {% endblock %}
