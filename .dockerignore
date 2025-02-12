@@ -1,0 +1,29 @@
+# Ignorer les fichiers inutiles et volumineux
+.git
+.github
+*.pyc
+__pycache__/
+*.ipynb_checkpoints/
+*.pkl
+*.csv
+*.png
+.pytest_cache
+.coverage
+
+model_ML
+
+# Ignorer les données brutes et fichiers temporaires
+data_cleaning/
+machine_learning/
+df_*.csv
+myenv/
+
+# Ignorer les configurations locales et caches
+.env
+.vscode/
+.idea/
+.DS_Store
+.md
+# Ignorer les caches Python et pip
+*.egg-info/
+pip-log.txt

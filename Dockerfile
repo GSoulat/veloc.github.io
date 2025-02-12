@@ -1,4 +1,4 @@
-FROM python:3.10.6
+FROM python:3.10-slim
 WORKDIR /
 ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv $VIRTUAL_ENV
